@@ -3,16 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using System.Net.Http;
+using MVCAPP.Models;
+using Newtonsoft.Json;
 namespace MVCAPP.Controllers
 {
     public class HomeController : Controller
     {
         public ActionResult Index()
         {
-            string s = "Ranjeet Singh";
-            string s1 = "Sapna Patil";
-            return View();
+           
+           List<Employee> employee=null;
+            HttpClient httpClient = new HttpClient();
+            httpClient.BaseAddress = new Uri("http://localhost:51780/api/values");
+            httpClient.DefaultRequestHeaders.Accept.Add(System.Net.Http.Headers.MediaTypeWithQualityHeaderValue.Parse("application/json"));
+            var responseMessage=httpClient.GetAsync("http://localhost:51780/api/values").Result;
+            if (responseMessage != null)
+            {
+                string  data = responseMessage.Content.ReadAsStringAsync().Result;
+                employee= JsonConvert.DeserializeObject<List<Employee>>(data);
+            }
+            return View(employee);
         }
 
         public ActionResult About()
