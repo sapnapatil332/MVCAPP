@@ -10,6 +10,7 @@ namespace MVCAPP.Controllers
     {
         public ActionResult Index()
         {
+            string s = "Ranjeet Singh";
             return View();
         }
 
