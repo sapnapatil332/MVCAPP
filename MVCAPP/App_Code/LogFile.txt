@@ -1,0 +1,17 @@
+
+-----Error started here-----
+13-Apr-19 6:28:52 PM
+Error message:One or more errors occurred.
+Error StackTrack:   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MVCAPP.Controllers.HomeController.Index() in D:\c#60 video\SapnaGitProject\MVCAPP\Controllers\HomeController.cs:line 23
+-------Error End Here--------
+-----Error started here-----
+13-Apr-19 6:29:28 PM
+Error message:One or more errors occurred.
+Error StackTrack:   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at System.Threading.Tasks.Task`1.get_Result()
+   at MVCAPP.Controllers.HomeController.Index() in D:\c#60 video\SapnaGitProject\MVCAPP\Controllers\HomeController.cs:line 23
+-------Error End Here--------
